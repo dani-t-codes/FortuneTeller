@@ -1,11 +1,24 @@
 $(document).ready(function() {
   $("form#fortune-survey").submit(function(event) {
     event.preventDefault();
+    let total=0;
     $("input:checkbox[name=unlucky]:checked").each(function() {
-      let question1 = (".sum:checked").
+        total += parseInt($(this).val()); 
+        //if numberOfLucky > numberofUnlucky {}
+      //  then #good-luck-hurray;
+      //else if numbefOfUnlucky > numberOfLucky {}
+      //  then #bad-luck-blues;
+      //else if numberOfLucky === numberOfUnlucky {}
+      //  then #try-again-later;
     });
     $("input:checkbox[name=lucky]:checked").each(function() {
-      let question2 = (".sum:checked")
+      total += parseInt($(this).val()); 
+      //if numberOfLucky > numberofUnlucky {}
+      //  then #good-luck-hurray;
+      //else if numbefOfUnlucky > numberOfLucky {}
+      //  then #bad-luck-blues;
+      //else if numberOfLucky === numberOfUnlucky {}
+      //  then #try-again-later;
     });
   })
   }) 
@@ -18,21 +31,4 @@ $(document).ready(function() {
 //5 results page
 
 
-// value of *all* checkboxes = 1. 
-// parseInt to add total occurences of unluckyValue > luckyValue {
-  //return #bad-luck-blues;
-// }
-// parseInt to add total occurences of luckyValue > unluckyValue {
-//return #good-luck-hurray;
-//}
-//parseInt else if luckyValue === unluckyValue { 
-//return #try-again-later;
-//}
-
-//if numberOfLucky > numberofUnlucky
-//  then #good-luck-hurray
-//else if numbefOfUnlucky > numberOfLucky
-//  then #bad-luck-blues
-//else if numberOfLucky === numberOfUnlucky
-//  then #try-again-later
 
